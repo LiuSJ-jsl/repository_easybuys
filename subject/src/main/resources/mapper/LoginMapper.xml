@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.htkj.subject.dao.LoginDao">
+    <select id="login" resultType="com.htkj.subject.entity.LoginUser">
+        select * from easybuy.easybuy_user where mobile = #{mobile} and password = #{password}
+    </select>
+    <select id="getMobile" resultType="com.htkj.subject.entity.LoginUser">
+        select mobile from easybuy.easybuy_user where mobile = #{mobile}
+    </select>
+    <insert id="addUser" parameterType="com.htkj.subject.entity.LoginUser">
+        insert into easybuy.easybuy_user
+        value(default,#{userName},#{password},#{sex},#{email},#{mobile},default)
+    </insert>
+</mapper>
