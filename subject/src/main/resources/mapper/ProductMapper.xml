@@ -2,6 +2,14 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.htkj.subject.dao.ProductDao">
     <select id="getProductByIsDelete" resultType="com.htkj.subject.entity.Product">
-        select * from easybuy.easybuy_product where isDelete = 0
+        select *
+        from easybuy.easybuy_product
+        where isDelete = 0
+    </select>
+
+    <select id="getProductById" resultType="com.htkj.subject.entity.Product">
+        select *
+        from easybuy.easybuy_product
+        where id = #{id};
     </select>
 </mapper>

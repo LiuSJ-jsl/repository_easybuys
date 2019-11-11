@@ -3,13 +3,12 @@ package com.htkj.subject.controller;
 import com.htkj.subject.dao.ProductDao;
 import com.htkj.subject.entity.Product;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 import java.util.List;
 
@@ -18,19 +17,27 @@ import java.util.List;
  * @Author: LiuSJ
  * @date: 2019/10/21 15:59
  */
-@RestController
+@Controller
 public class ProductController {
 
     @Autowired
     public ProductDao productDao;
 
-
     @RequestMapping("/product")
-    public ModelAndView product(ModelAndView modelAndView, @Valid String userName) {
+    public String product(ModelMap map, HttpServletRequest request) {
         List<Product> productList = productDao.getProductByIsDelete();
-        modelAndView.addObject("productList", productList);
-        modelAndView.addObject("userName", userName);
-        modelAndView.setViewName("products");
-        return modelAndView;
+        HttpSession session = request.getSession();
+        Object userName = session.getAttribute("userName");
+        map.addAttribute("userName", userName);
+        map.addAttribute("productList", productList);
+        return "products";
+    }
+
+    @RequestMapping("/single")
+    public String single(ModelMap map, @Valid int id) {
+        System.out.println(id);
+        Product product = productDao.getProductById(id);
+        map.addAttribute("productById", product);
+        return "particulars";
     }
 }

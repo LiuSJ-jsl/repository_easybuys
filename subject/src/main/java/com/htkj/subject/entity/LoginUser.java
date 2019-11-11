@@ -1,10 +1,5 @@
 package com.htkj.subject.entity;
 
-import javax.validation.constraints.Email;
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.Pattern;
-import javax.validation.constraints.Size;
-
 /**
  * @Description: 登录的实体类
  * @Author: LiuSJ
@@ -22,6 +17,7 @@ public class LoginUser {
     String mobile;
     int type;
     String vcode;
+
 
     public int getId() {
         return id;

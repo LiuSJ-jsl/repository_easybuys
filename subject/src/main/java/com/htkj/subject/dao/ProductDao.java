@@ -21,4 +21,14 @@ public interface ProductDao {
      * @date 2019/10/21 15:54
      */
     List<Product> getProductByIsDelete();
+
+    /**
+     * @param [id]
+     * @return com.htkj.subject.entity.Product
+     * @MethodName: getProductById
+     * @Description: 查询单个
+     * @author LiuShanJie
+     * @date 2019/11/11 8:20
+     */
+    Product getProductById(int id);
 }
