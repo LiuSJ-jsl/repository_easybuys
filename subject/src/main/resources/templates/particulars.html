@@ -29,7 +29,7 @@
                     <td>
                         <div th:text="${productById.getStock()}" th:value="${productById.getStock()}"></div>
                     </td>
-                    <td><a href="/order">购买</a></td>
+                    <td><a th:href="@{/order}">购买</a></td>
                 </tr>
             </tbody>
         </table>
