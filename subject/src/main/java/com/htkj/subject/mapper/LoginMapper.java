@@ -1,16 +1,16 @@
-package com.htkj.subject.dao;
+package com.htkj.subject.mapper;
 
 import com.htkj.subject.entity.LoginUser;
+import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Param;
-import org.springframework.stereotype.Component;
+import org.apache.ibatis.annotations.Select;
 
 /**
- * @Description: 登陆的DAO
- * @Author: LiuSJ
- * @date: 2019/10/18 11:58
+ * @Description:
+ * @Author: LiuShanJie
+ * @date: 2019/11/13 8:36
  */
-@Component
-public interface LoginDao {
+public interface LoginMapper {
     /**
      * @return com.htkj.easybuy_entity.entity.LoginUser
      * @MethodName: login
@@ -19,6 +19,7 @@ public interface LoginDao {
      * @Param [mobile, password]
      * @date 2019/10/19 8:40
      */
+    @Select("select * from easybuy.easybuy_user where mobile = #{mobile} and password = #{password}")
     LoginUser login(@Param("mobile") String mobile, @Param("password") String password);
 
     /**
@@ -29,7 +30,8 @@ public interface LoginDao {
      * @Param [mobile]
      * @date 2019/10/23 16:20
      */
-    LoginUser getMobile(String mobile);
+    @Select("select mobile from easybuy.easybuy_user where mobile = #{mobile}")
+    LoginUser getMobile(@Param("mobile") String mobile);
 
     /**
      * @return com.htkj.easybuy_entity.entity.LoginUser
@@ -39,5 +41,6 @@ public interface LoginDao {
      * @Param [loginUser]
      * @date 2019/10/21 17:17
      */
-    int addUser(LoginUser loginUser);
+    @Insert("insert into easybuy.easybuy_user value ( default,#{loginUser.userName},#{loginUser.password},#{loginUser.sex},#{loginUser.email},#{loginUser.mobile}, default)")
+    int addUser(@Param("loginUser") LoginUser loginUser);
 }

@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@MapperScan(value = {"com.htkj.subject.dao"})
+@MapperScan(value = {"com.htkj.subject.mapper"})
 public class SubjectApplication {
 
     public static void main(String[] args) {

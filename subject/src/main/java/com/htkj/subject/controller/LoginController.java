@@ -1,7 +1,7 @@
 package com.htkj.subject.controller;
 
-import com.htkj.subject.dao.LoginDao;
 import com.htkj.subject.entity.LoginUser;
+import com.htkj.subject.mapper.LoginMapper;
 import com.htkj.verify.util.SmsUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -24,7 +24,7 @@ import javax.validation.Valid;
 public class LoginController {
 
     @Autowired
-    public LoginDao loginDao;
+    public LoginMapper loginMapper;
 
     @GetMapping("/login")
     public String login() {
@@ -38,7 +38,7 @@ public class LoginController {
         System.err.println("password:" + password);
         System.err.println("mobile:" + mobile);
 
-        LoginUser loginUser = loginDao.login(mobile, password);
+        LoginUser loginUser = loginMapper.login(mobile, password);
         if (loginUser == null) {
             System.err.println("查询的数据为空");
             map.addAttribute("error", "查询不到该账户请核对！");
@@ -70,14 +70,14 @@ public class LoginController {
             map.addAttribute("error", "请填写你的验证码");
             return "regist";
         }
-        LoginUser userByMobil = loginDao.getMobile(user.getMobile());
+        LoginUser userByMobil = loginMapper.getMobile(user.getMobile());
 
         if (userByMobil != null) {
             map.addAttribute("error", "当前手机号已注册");
             return "regist";
         }
 
-        int loginUser = loginDao.addUser(user);
+        int loginUser = loginMapper.addUser(user);
         if (loginUser == 0) {
             System.err.println("null");
             map.addAttribute("error", "请检查你的信息是否完整");

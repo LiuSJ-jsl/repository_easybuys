@@ -10,6 +10,3 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
 server:
   port: 8088
-
-mybatis:
-  mapper-locations: mapper/*Mapper.xml

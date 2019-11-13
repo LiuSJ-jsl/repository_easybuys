@@ -1,7 +1,7 @@
 package com.htkj.subject.controller;
 
-import com.htkj.subject.dao.ProductDao;
 import com.htkj.subject.entity.Product;
+import com.htkj.subject.mapper.ProductMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -21,11 +21,11 @@ import java.util.List;
 public class ProductController {
 
     @Autowired
-    public ProductDao productDao;
+    public ProductMapper productMapper;
 
     @RequestMapping("/product")
     public String product(ModelMap map, HttpServletRequest request) {
-        List<Product> productList = productDao.getProductByIsDelete();
+        List<Product> productList = productMapper.getProductByIsDelete();
         HttpSession session = request.getSession();
         Object userName = session.getAttribute("userName");
         map.addAttribute("userName", userName);
@@ -36,7 +36,7 @@ public class ProductController {
     @RequestMapping("/single")
     public String single(ModelMap map, @Valid int id) {
         System.out.println(id);
-        Product product = productDao.getProductById(id);
+        Product product = productMapper.getProductById(id);
         map.addAttribute("productById", product);
         return "particulars";
     }

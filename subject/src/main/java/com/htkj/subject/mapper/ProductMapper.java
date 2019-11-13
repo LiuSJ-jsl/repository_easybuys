@@ -1,17 +1,17 @@
-package com.htkj.subject.dao;
+package com.htkj.subject.mapper;
 
 import com.htkj.subject.entity.Product;
-import org.springframework.stereotype.Component;
+import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
 
 /**
- * @Description: 首页的dao
- * @Author: LiuSJ
- * @date: 2019/10/21 15:58
+ * @Description:
+ * @Author: LiuShanJie
+ * @date: 2019/11/13 8:54
  */
-@Component
-public interface ProductDao {
+public interface ProductMapper {
     /**
      * @return java.util.List<com.htkj.easybuy_entity.entity.Product>
      * @MethodName: getProductByIsDelete
@@ -20,6 +20,7 @@ public interface ProductDao {
      * @Param []
      * @date 2019/10/21 15:54
      */
+    @Select("select * from easybuy.easybuy_product where isDelete = 0")
     List<Product> getProductByIsDelete();
 
     /**
@@ -30,5 +31,6 @@ public interface ProductDao {
      * @author LiuShanJie
      * @date 2019/11/11 8:20
      */
-    Product getProductById(int id);
+    @Select("select * from easybuy.easybuy_product where id = #{id};")
+    Product getProductById(@Param("id") int id);
 }
