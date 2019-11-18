@@ -1,6 +1,5 @@
 package com.htkj.subject.controller;
 
-import com.alibaba.fastjson.JSONObject;
 import com.htkj.subject.entity.LoginUser;
 import com.htkj.subject.mapper.LoginMapper;
 import com.htkj.verify.util.SmsUtils;
@@ -82,7 +81,7 @@ public class LoginController {
             model.addAttribute("error", "请检查你的信息是否完整");
             return "regist";
         }
-        model.addAttribute("user", JSONObject.toJSONString(loginUser));
+        model.addAttribute("user", loginUser);
         return "redirect:/login";
     }
 

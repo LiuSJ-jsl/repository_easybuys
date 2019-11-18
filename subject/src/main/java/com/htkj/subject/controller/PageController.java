@@ -21,4 +21,9 @@ public class PageController {
     public String buycarthree(Model model) {
         return "BuyCar_Three";
     }
+
+    @RequestMapping("/buycar")
+    public String buycar(Model model) {
+        return "BuyCar";
+    }
 }
