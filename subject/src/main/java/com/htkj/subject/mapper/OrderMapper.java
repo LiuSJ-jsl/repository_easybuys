@@ -19,9 +19,9 @@ public interface OrderMapper {
      * @author LiuShanJie
      * @date 2019/11/11 11:03
      */
-    @Insert("insert into easybuy.easybuy_order (id,userId,userAddress,createTime,cost,serialNumber,sid,number,gid)value(default,51,#{order.userAddress},NOW(),120.0,#{order.serialNumber},#{order.sid},#{order.number},1)")
+    @Insert("insert into easybuy.easybuy_order (id,userId,userAddress,createTime,cost,serialNumber,sid,number,gid)value(default,50,#{order.userAddress},NOW(),120.0,#{order.serialNumber},#{order.sid},#{order.number},1)")
     int addOrder(@Param("order") Order order);
 
-    @Select("select * from easybuy_order ea,(select MAX(createTime) as MaxDate from easybuy_order where userid = 51) eb where ea.createTime = eb.MaxDate")
+    @Select("select * from easybuy_order ea,(select MAX(createTime) as MaxDate from easybuy_order where userid = 50) eb where ea.createTime = eb.MaxDate")
     Order getOrder(@Param("userId") int id);
 }

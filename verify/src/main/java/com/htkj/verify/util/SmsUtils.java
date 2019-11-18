@@ -8,10 +8,6 @@ import com.aliyuncs.exceptions.ClientException;
 import com.aliyuncs.exceptions.ServerException;
 import com.aliyuncs.profile.DefaultProfile;
 import com.aliyuncs.profile.IClientProfile;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * @Description: 获取手机验证码的工具类
@@ -28,7 +24,7 @@ public class SmsUtils {
     static final String accessKeyId = "LTAI4FoUN3cZbxGLixh2Pip7";           // TODO 改这里
     static final String accessKeySecret = "5QG5xK0mH9vi9I5nVTnWBiFUNraZw9"; // TODO 改这里
 
-    public static String getSsm(String number) {
+    public static int getSsm(String number) {
 
         //可自助调整超时时间
         System.setProperty("sun.net.client.defaultConnectTimeout", "10000");
@@ -78,7 +74,7 @@ public class SmsUtils {
         System.out.println("当前手机号：" + number);
         System.out.println("当前验证码：" + code);
         System.out.println("当前返回值：" + cod);
-        return cod;
+        return code;
     }
 
     public static void main(String[] args) {

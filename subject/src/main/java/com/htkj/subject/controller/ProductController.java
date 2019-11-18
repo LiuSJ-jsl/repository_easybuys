@@ -4,7 +4,7 @@ import com.htkj.subject.entity.Product;
 import com.htkj.subject.mapper.ProductMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
@@ -24,20 +24,20 @@ public class ProductController {
     public ProductMapper productMapper;
 
     @RequestMapping("/product")
-    public String product(ModelMap map, HttpServletRequest request) {
+    public String product(Model model, HttpServletRequest request) {
         List<Product> productList = productMapper.getProductByIsDelete();
         HttpSession session = request.getSession();
         Object userName = session.getAttribute("userName");
-        map.addAttribute("userName", userName);
-        map.addAttribute("productList", productList);
-        return "products";
+        model.addAttribute("userName", userName);
+        model.addAttribute("productList", productList);
+        return "index";
     }
 
     @RequestMapping("/single")
-    public String single(ModelMap map, @Valid int id) {
+    public String single(Model model, @Valid int id) {
         System.out.println(id);
         Product product = productMapper.getProductById(id);
-        map.addAttribute("productById", product);
-        return "particulars";
+        model.addAttribute("productById", product);
+        return "product";
     }
 }
