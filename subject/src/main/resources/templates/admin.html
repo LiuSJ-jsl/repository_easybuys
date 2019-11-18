@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <meta http-equiv="pragma" content="no-cache">
+        <meta http-equiv="cache-control" content="no-cache">
+        <meta http-equiv="expires" content="0">
+        <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+        <meta http-equiv="description" content="This is my page">
+        <!--
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    -->
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <link type="text/css" rel="stylesheet" href="/static/css/style.css"/>
+        <link rel="stylesheet" href="/static/css/admin.css"/>
+        <script type="text/javascript" src="/static/js/jquery-1.12.4.js"></script>
+
+        <script type="text/javascript" src="/static/js/menu.js"></script>
+        <script type="text/javascript" src="/static/js/select.js"></script>
+        <script type="text/javascript" src="/static/js/User.js"></script>
+        <script type="text/javascript" src="/static/js/UserUpdate.js"></script>
+        <script type="text/javascript" src="/static/js/select.js"></script>
+
+    </head>
+
+    <body>
+
+        <div class="fix-select">
+            <div class="fix-select-wrap">
+                <div class="time-box" id="J_TimeSlide">
+                    <div class="trigger-bar">
+                        <a href="" class="previ"></a>
+                        <a href="" id="imgPlay"></a>
+                    </div>
+                    <div class="active-bg personalized-active-bg"></div>
+                    <div class="scrollable-panel" data-sysTime="20191030142108">
+                        <div class="scrollable-content "
+                             data-batchId="201910291500" data-starttime="20191029150000"
+                             data-endtime="20191029165959" data-status="past"
+                             data-title="本场次还有宝贝可以继续抢购哦">
+                            <p class="time">15:00</p>
+                            <p class="text">已开抢</p>
+                        </div>
+                        <div class="scrollable-content "
+                             data-batchId="201910291700" data-starttime="20191029170000"
+                             data-endtime="20191029185959" data-status="past"
+                             data-title="本场次还有宝贝可以继续抢购哦">
+                            <p class="time">17:00</p>
+                            <p class="text">已开抢</p>
+                        </div>
+                        <div class="scrollable-content "
+                             data-batchId="201910291900" data-starttime="20191029190000"
+                             data-endtime="20191029205959" data-status="past"
+                             data-title="本场次还有宝贝可以继续抢购哦">
+                            <p class="time">19:00</p>
+                            <p class="text">已开抢</p>
+                        </div>
+                        <div class="scrollable-content "
+                             data-batchId="201910292100" data-starttime="20191029210000"
+                             data-endtime="20191029215959" data-status="past"
+                             data-title="本场次还有宝贝可以继续抢购哦">
+                            <p class="time">21:00</p>
+                            <p class="text">已开抢</p>
+                        </div>
+                        <div class="scrollable-content "
+                             data-batchId="201910292200" data-starttime="20191029220000"
+                             data-endtime="20191029225959" data-status="past"
+                             data-title="本场次还有宝贝可以继续抢购哦">
+                            <p class="time">22:00</p>
+                            <p class="text">已开抢</p>
+                        </div>
+                        <div class="scrollable-content "
+                             data-batchId="201910292300" data-starttime="20191029230000"
+                             data-endtime="20191029235959" data-status="past"
+                             data-title="本场次还有宝贝可以继续抢购哦">
+                            <p class="time">23:00</p>
+                            <p class="text">已开抢</p>
+                        </div>
+                        <div class="scrollable-content "
+                             data-batchId="201910300000" data-starttime="20191030000000"
+                             data-endtime="20191030075959" data-status="past"
+                             data-title="本场次还有宝贝可以继续抢购哦">
+                            <p class="time">00:00</p>
+                            <p class="text">已开抢</p>
+                        </div>
+                        <div class="scrollable-content "
+                             data-batchId="201910300800" data-starttime="20191030080000"
+                             data-endtime="20191030095959" data-status="past"
+                             data-title="本场次还有宝贝可以继续抢购哦">
+                            <p class="time">08:00</p>
+                            <p class="text">已开抢</p>
+                        </div>
+                        <div class="scrollable-content "
+                             data-batchId="201910301000" data-starttime="20191030100000"
+                             data-endtime="20191030105959" data-status="past"
+                             data-title="本场次还有宝贝可以继续抢购哦">
+                            <p class="time">10:00</p>
+                            <p class="text">已开抢</p>
+                        </div>
+                        <div class="scrollable-content "
+                             data-batchId="201910301100" data-starttime="20191030110000"
+                             data-endtime="20191030115959" data-status="past"
+                             data-title="本场次还有宝贝可以继续抢购哦">
+                            <p class="time">11:00</p>
+                            <p class="text">已开抢</p>
+                        </div>
+                        <div class="scrollable-content "
+                             data-batchId="201910301200" data-starttime="20191030120000"
+                             data-endtime="20191030125959" data-status="past"
+                             data-title="本场次还有宝贝可以继续抢购哦">
+                            <p class="time">12:00</p>
+                            <p class="text">已开抢</p>
+                        </div>
+                        <div class="scrollable-content "
+                             data-batchId="201910301300" data-starttime="20191030130000"
+                             data-endtime="20191030135959" data-status="past"
+                             data-title="本场次还有宝贝可以继续抢购哦">
+                            <p class="time">13:00</p>
+                            <p class="text">已开抢</p>
+                        </div>
+                        <div class="scrollable-content "
+                             data-batchId="201910301400" data-starttime="20191030140000"
+                             data-endtime="20191030145959" data-status="current"
+                             data-title="限时限量 疯狂抢购">
+                            <p class="time">14:00</p>
+                            <p class="text">抢购进行中</p>
+                        </div>
+                        <div class="scrollable-content "
+                             data-batchId="201910301500" data-starttime="20191030150000"
+                             data-endtime="20191030165959" data-status="future"
+                             data-title="提前设置提醒不错过">
+                            <p class="time">15:00</p>
+                            <p class="text">即将开场</p>
+                        </div>
+                        <div class="scrollable-content "
+                             data-batchId="201910301700" data-starttime="20191030170000"
+                             data-endtime="20191030185959" data-status="future"
+                             data-title="提前设置提醒不错过">
+                            <p class="time">17:00</p>
+                            <p class="text">即将开场</p>
+                        </div>
+                        <div class="scrollable-content "
+                             data-batchId="201910301900" data-starttime="20191030190000"
+                             data-endtime="20191030205959" data-status="future"
+                             data-title="提前设置提醒不错过">
+                            <p class="time">19:00</p>
+                            <p class="text">即将开场</p>
+                        </div>
+                        <div class="scrollable-content "
+                             data-batchId="201910302100" data-starttime="20191030210000"
+                             data-endtime="20191030215959" data-status="future"
+                             data-title="提前设置提醒不错过">
+                            <p class="time">21:00</p>
+                            <p class="text">即将开场</p>
+                        </div>
+                        <div class="scrollable-content "
+                             data-batchId="201910302200" data-starttime="20191030220000"
+                             data-endtime="20191030225959" data-status="future"
+                             data-title="提前设置提醒不错过">
+                            <p class="time">22:00</p>
+                            <p class="text">即将开场</p>
+                        </div>
+                        <div class="scrollable-content "
+                             data-batchId="201910302300" data-starttime="20191030230000"
+                             data-endtime="20191031225959" data-status="future"
+                             data-title="提前设置提醒不错过">
+                            <p class="time">23:00</p>
+                            <p class="text">即将开场</p>
+                        </div>
+                    </div>
+                </div>
+                <ul class="sort-box">
+                    <li class="personalized active" data-type="personalized">默认</li>
+                    <li class="sales" data-type="sales">按销量<i></i></li>
+                    <li class="price" data-type="price">按价格<i></i></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="menu_bg">
+            <div class="menu">
+                <!--Begin 商品分类详情 Begin-->
+
+
+                <div class="leftNav">
+                    <ul>
+                        <li class="nav1">
+                            <div class="fj">
+                                <span class="n_img"><span></span><img src="/static/images/nav1.png"/></span> <span
+                                    class="fl">美食</span>
+                            </div>
+                            <div id="zj">
+                                <div class="zj_l"></div>
+                            </div>
+                            <div class="zj">
+                                <div class="zj_l">
+                                    <a href="#" style="color:#ff4e00;">美食</a>
+                                    <div class="fresh_txt_c">
+                                        <a href="#">饼干糕点</a>
+                                        <a href="#">休闲零食</a>
+                                        <a href="#">饮料果汁</a>
+                                        <a href="#">牛奶乳品</a>
+                                        <a href="#">冲饮谷物</a>
+                                        <a href="#">营养保健</a>
+                                        <a href="#">冲饮谷物</a>
+                                        <a href="#">营养保健</a>
+                                    </div>
+                                </div>
+                                <div class="zj_r">
+
+                                    <a href="#"><img src="/static/images/n_img1.jpg" width="236" height="200"/></a>
+                                    <a href="#"><img src="/static/images/n_img2.jpg" width="236" height="200"/></a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--End Menu End-->
+        <div class="i_bg bg_color">
+            <div class="i_ban_bg">
+                <!--Begin Banner Begin-->
+                <div class="banner">
+                    <div class="top_slide_wrap">
+                        <img src="/static/images/ban1.jpg" width="750" height="401"/>
+                    </div>
+                </div>
+                <!--End Banner End-->
+                <div class="inews">
+                    <a href="#"><img src="/static/images/tm_b2.jpg" width="225" height="400"/></a>
+                </div>
+            </div>
+            <div class="content mar_10">
+
+                <div class="content">
+                    <div class="food_left">
+                        <div class="food_ban">
+                            <div id="imgPlay2">
+                                <ul class="imgs" id="actor2">
+                                    <li>
+                                        <a href="#"><img src="/static/images/food_r.jpg" width="211" height="286"/></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="/static/images/food_r.jpg" width="211" height="286"/></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="/static/images/food_r.jpg" width="211" height="286"/></a>
+                                    </li>
+                                </ul>
+                                <div class="prev_f">上一张</div>
+                                <div class="next_f">下一张</div>
+                            </div>
+                        </div>
+                        <div class="fresh_txt">
+                            <div class="fresh_txt_c">
+                                <a href="#">饼干糕点</a>
+                                <a href="#">休闲零食</a>
+                                <a href="#">饮料果汁</a>
+                                <a href="#">牛奶乳品</a>
+                                <a href="#">冲饮谷物</a>
+                                <a href="#">营养保健</a>
+                                <a href="#">冲饮谷物</a>
+                                <a href="#">营养保健</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fresh_mid">
+                        <ul>
+                            <li>
+                                <div class="name">
+                                    <a href="#">莫斯利安酸奶</a>
+                                </div>
+                                <div class="price">
+                                    <font>￥<span>96.00</span></font> &nbsp; 25R
+                                </div>
+                                <div class="img">
+                                    <a href="#"><img src="/static/images/food_1.jpg" width="185" height="155"/></a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="name">
+                                    <a href="#">莫斯利安酸奶</a>
+                                </div>
+                                <div class="price">
+                                    <font>￥<span>96.00</span></font> &nbsp; 25R
+                                </div>
+                                <div class="img">
+                                    <a href="#"><img src="/static/images/food_2.jpg" width="185" height="155"/></a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="name">
+                                    <a href="#">莫斯利安酸奶</a>
+                                </div>
+                                <div class="price">
+                                    <font>￥<span>96.00</span></font> &nbsp; 25R
+                                </div>
+                                <div class="img">
+                                    <a href="#"><img src="/static/images/food_3.jpg" width="185" height="155"/></a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="name">
+                                    <a href="#">莫斯利安酸奶</a>
+                                </div>
+                                <div class="price">
+                                    <font>￥<span>96.00</span></font> &nbsp; 25R
+                                </div>
+                                <div class="img">
+                                    <a href="#"><img src="/static/images/food_4.jpg" width="185" height="155"/></a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="name">
+                                    <a href="#">莫斯利安酸奶</a>
+                                </div>
+                                <div class="price">
+                                    <font>￥<span>96.00</span></font> &nbsp; 25R
+                                </div>
+                                <div class="img">
+                                    <a href="#"><img src="/static/images/food_5.jpg" width="185" height="155"/></a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="name">
+                                    <a href="#">莫斯利安酸奶</a>
+                                </div>
+                                <div class="price">
+                                    <font>￥<span>96.00</span></font> &nbsp; 25R
+                                </div>
+                                <div class="img">
+                                    <a href="#"><img src="/static/images/food_6.jpg" width="185" height="155"/></a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="fresh_right">
+                        <ul>
+                            <li>
+                                <a href="#"><img src="/static/images/food_b1.jpg" width="260" height="220"/></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="/static/images/food_b2.jpg" width="260" height="220"/></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <ul>
+                    <li>
+                        <a href="product.html"><img src="/static/images/tm_3.jpg"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <script type="text/javascript" src="/static/js/NewsPages.js"></script>
+    </body>
+    <script type="text/javascript" src="/static/js/left.js"></script>
+</html>
