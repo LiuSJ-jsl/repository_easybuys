@@ -28,7 +28,9 @@ public class ProductController {
         List<Product> productList = productMapper.getProductByIsDelete();
         HttpSession session = request.getSession();
         Object userName = session.getAttribute("userName");
+        Object id = session.getAttribute("id");
         model.addAttribute("userName", userName);
+        model.addAttribute("id", id);
         model.addAttribute("productList", productList);
         return "index";
     }

@@ -1,11 +1,12 @@
-jQuery(function() {
+jQuery(function () {
     var userName = jQuery(".username").val();
-
-    if (userName =="null" || userName == ""){
-        alert(userName)
+    var uid = jQuery(".uid").val();
+    // alert(uid)
+    if (userName == "null" || userName == "") {
+        // alert(userName)
         jQuery(".sou").prepend(' <span class="fl">你好，请<a href="/login">登录</a>&nbsp; <a href="regist.html" style="color:#ff4e00;">免费注册</a>&nbsp;|&nbsp;<a href="#">我的订单</a>&nbsp;|</span>');
         jQuery(".car_bg").prepend('<div class="un_login">还未登录！<a href="login.html" style="color:#ff4e00;">马上登录</a> 查看购物车！</div>\n')
-    }else {
+    } else {
 
         jQuery(".car_bg").prepend(' <ul class="cars">\n' +
             '                        <li>\n' +
@@ -19,12 +20,12 @@ jQuery(function() {
             '                            </div>\n' +
             '                            <div class="name"><a href="#">香奈儿（Chanel）邂逅活力淡香水50ml</a></div>\n' +
             '                            <div class="price"><font color="#ff4e00">￥399</font> X1</div>\n' +
-            '                        </li>\n'+
+            '                        </li>\n' +
             '                    </ul>\n' +
             '                    <div class="price_sum">共计&nbsp; <font color="#ff4e00">￥</font><span>1058</span></div>\n' +
-            '                    <div class="price_a"><a th:href="@{/buycar}">去购物车结算</a></div>\n' +
+            '                    <div class="price_a"><a href="/buycar?uid='+uid+'">去购物车结算</a></div>\n' +
             '                    <!--End 购物车已登录 End-->')
-        jQuery(".sou").prepend(" <span class='fl'>欢迎:<a href='#' >"+ userName +"</span></a>&nbsp;|&nbsp;<a href='#'>我的订单</a>&nbsp;|</span>");
+        jQuery(".sou").prepend(" <span class='fl'>欢迎:<a href='#' >" + userName + "</span></a>&nbsp;|&nbsp;<a href='#'>我的订单</a>&nbsp;|</span>");
 
     }
 

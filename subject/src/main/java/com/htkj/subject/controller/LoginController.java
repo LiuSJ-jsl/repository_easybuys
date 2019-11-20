@@ -47,6 +47,7 @@ public class LoginController {
         System.err.println("查询成功");
         HttpSession session = request.getSession();
         session.setAttribute("userName", loginUser.getUserName());
+        session.setAttribute("id", loginUser.getId());
         return "redirect:/product";
     }
 
