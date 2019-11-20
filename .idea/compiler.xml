@@ -6,28 +6,24 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="easybuys" />
         <module name="seckill" />
         <module name="seckill2" />
+        <module name="easybuys" />
         <module name="subject" />
         <module name="verify" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="easybuys" target="1.8" />
-      <module name="eureka" target="1.8" />
-      <module name="sandbox" target="1.8" />
-      <module name="seckill" target="1.8" />
-      <module name="seckill2" target="1.8" />
-      <module name="subject" target="1.8" />
-      <module name="verify" target="1.8" />
+    <bytecodeTargetLevel target="8">
+      <module name="easybuys" target="8" />
+      <module name="seckill" target="8" />
+      <module name="seckill2" target="8" />
+      <module name="subject" target="8" />
+      <module name="verify" target="8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="easybuys" options="-parameters" />
-      <module name="eureka" options="-parameters" />
-      <module name="sandbox" options="-parameters" />
       <module name="seckill" options="-parameters" />
       <module name="seckill2" options="-parameters" />
       <module name="subject" options="-parameters" />
