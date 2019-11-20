@@ -14,11 +14,11 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
-      <module name="easybuys" target="8" />
-      <module name="seckill" target="8" />
-      <module name="seckill2" target="8" />
-      <module name="subject" target="8" />
-      <module name="verify" target="8" />
+      <module name="easybuys" target="1.8" />
+      <module name="seckill" target="1.8" />
+      <module name="seckill2" target="1.8" />
+      <module name="subject" target="1.8" />
+      <module name="verify" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
