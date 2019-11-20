@@ -6,6 +6,7 @@ jQuery(function() {
         jQuery(".sou").prepend(' <span class="fl">你好，请<a href="/login">登录</a>&nbsp; <a href="regist.html" style="color:#ff4e00;">免费注册</a>&nbsp;|&nbsp;<a href="#">我的订单</a>&nbsp;|</span>');
         jQuery(".car_bg").prepend('<div class="un_login">还未登录！<a href="login.html" style="color:#ff4e00;">马上登录</a> 查看购物车！</div>\n')
     }else {
+
         jQuery(".car_bg").prepend(' <ul class="cars">\n' +
             '                        <li>\n' +
             '                            <div class="img"><a href="#"><img src="/static/images/car1.jpg" width="58" height="58"/></a>\n' +
