@@ -21,12 +21,9 @@ public class PageController {
     public String buycarthree(Model model) {
         return "BuyCar_Three";
     }
-<<<<<<< HEAD
-=======
 
     @RequestMapping("/buycar")
     public String buycar(Model model) {
         return "BuyCar";
     }
->>>>>>> b04f49128bc12616b38a9ccebae7c705fdcf58d8
 }
