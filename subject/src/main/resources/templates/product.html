@@ -914,6 +914,11 @@
     </body>
 
     <script src="/static/js/ShopShow.js"></script>
+    <script>
+        jq(".p_cl li").click(function(){
+            jq(this).toggleClass("checked")
+        });
+    </script>
 
     <!--[if IE 6]>-->
     <!--<script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>-->

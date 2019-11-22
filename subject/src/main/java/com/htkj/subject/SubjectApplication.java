@@ -10,6 +10,8 @@ public class SubjectApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(SubjectApplication.class, args);
+        Main main = new Main();
+        main.test_trade_precreate();
     }
 
 }
