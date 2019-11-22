@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="trade_precreate">
+    <output-path>$PROJECT_DIR$/out/artifacts/trade_precreate</output-path>
+    <root id="root">
+      <element id="module-output" name="subject" />
+    </root>
+  </artifact>
+</component>

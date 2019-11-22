@@ -30,6 +30,7 @@
 
         <script type="text/javascript" src="/static/js/shade.js"></script>
         <script type="text/javascript" src="/static/js/products.js"></script>
+        <script type="text/javascript" src="/static/js/index.js"></script>
 
         <title></title>
     </head>
@@ -41,10 +42,9 @@
 
                 <!--End 所在收货地区 End-->
                 <span class="fr">
-        	<span class="fl">你好，请<a href="Login.html">登录</a>&nbsp; <a href="Regist.html" style="color:#ff4e00;">免费注册</a>&nbsp;|&nbsp;<a
-                    href="#">我的订单</a>&nbsp;|</span>
-        	<span class="ss">
-            	<div class="ss_list">
+                      <input type="hidden" class="username" value='15194593757'/>
+<!--                    <input type="hidden" class="uid" th:value='${id}'/>-->
+                    	<div class="ss_list">
                 	<a href="#">收藏夹</a>
                     <div class="ss_list_bg">
                     	<div class="s_city_t"></div>
@@ -54,7 +54,7 @@
                                 <li><a href="#">我的收藏夹</a></li>
                             </ul>
                         </div>
-                    </div>     
+                    </div>
                 </div>
                 <div class="ss_list">
                 	<a href="#">客户服务</a>
@@ -67,7 +67,7 @@
                                 <li><a href="#">客户服务</a></li>
                             </ul>
                         </div>
-                    </div>    
+                    </div>
                 </div>
                 <div class="ss_list">
                 	<a href="#">网站导航</a>
@@ -79,14 +79,9 @@
                                 <li><a href="#">网站导航</a></li>
                             </ul>
                         </div>
-                    </div>    
+                    </div>
                 </div>
-            </span>
-            <span class="fl">|&nbsp;关注我们：</span>
-            <span class="s_sh"><a href="#" class="sh1">新浪</a><a href="#" class="sh2">微信</a></span>
-            <span class="fr">|&nbsp;<a href="#">手机版&nbsp;<img src="/static/images/s_tel.png"
-                                                              align="absmiddle"/></a></span>
-        </span>
+                </span>
             </div>
         </div>
         <div class="top">
@@ -921,13 +916,12 @@
             jq(this).siblings('li').removeClass('checked');  // 删除其他兄弟元素的样式
             jq(this).addClass('checked');                            // 添加当前元素的样式
             var  vchecked =  jq(this).text();
-            alert(vchecked);
+
         });
         jq(".P_clas li").click(function(){
             jq(this).siblings('li').removeClass('checked');  // 删除其他兄弟元素的样式
             jq(this).addClass('checked');                            // 添加当前元素的样式
             var  songs =  jq(this).text();
-            alert(songs);
         });
     </script>
 
