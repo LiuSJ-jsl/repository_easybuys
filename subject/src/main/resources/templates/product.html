@@ -497,7 +497,7 @@
                     </div>
                     <div class="des_choice">
                         <span class="fl">颜色选择：</span>
-                        <ul class="p_cl">
+                        <ul class="P_clas">
                             <li>红色
                                 <div class="ch_img"></div>
                             </li>
@@ -916,8 +916,18 @@
 
     <script src="/static/js/ShopShow.js"></script>
     <script>
+
         jq(".p_cl li").click(function(){
-            jq(this).toggleClass("checked")
+            jq(this).siblings('li').removeClass('checked');  // 删除其他兄弟元素的样式
+            jq(this).addClass('checked');                            // 添加当前元素的样式
+            var  vchecked =  jq(this).text();
+            alert(vchecked);
+        });
+        jq(".P_clas li").click(function(){
+            jq(this).siblings('li').removeClass('checked');  // 删除其他兄弟元素的样式
+            jq(this).addClass('checked');                            // 添加当前元素的样式
+            var  songs =  jq(this).text();
+            alert(songs);
         });
     </script>
 
