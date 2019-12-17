@@ -498,7 +498,7 @@
                             <td align="center">不支持保价</td>
                         </tr>
                         <tr>
-                            <td align="center"><input type="checkbox" name="ch" checked="checked"/></td>
+                            <td align="center"><input type="checkbox" name="ch" /></td>
                             <td align="center" style="font-size:14px;"><b>邮局平邮</b></td>
                             <td>运费固定</td>
                             <td align="center">￥15.00</td>
@@ -585,6 +585,15 @@
                 jq(this).siblings('li').removeClass('checked');  // 删除其他兄弟元素的样式
                 jq(this).addClass('checked');                            // 添加当前元素的样式
             });
+
+
+                jq('.car_tab').find('input[type=checkbox]').bind('click', function(){
+
+                    jq('.car_tab').find('input[type=checkbox]').not(this).attr("checked", false);
+
+                });
+
+
 
         })
 
