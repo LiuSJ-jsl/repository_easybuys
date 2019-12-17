@@ -90,10 +90,8 @@ public class LoginController {
     @ResponseBody
     public String getVerify(@Valid LoginUser user) {
         int sms = SmsUtils.getSsm(user.getMobile());
-        String vcode = user.getVcode();
         System.out.println("手机号：" + user.getMobile());
-        System.out.println("sms：" + sms);
-        System.out.println("验证码：" + vcode);
+        System.out.println("验证码：" + sms);
         if (!user.getVcode().equals(sms)) {
             return "true";
         }
