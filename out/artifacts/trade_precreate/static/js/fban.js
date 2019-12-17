@@ -33,7 +33,7 @@ jQuery(document).ready(function() {
 			})
 		})
 	});
-	jq('#calendar td').live('mouseover',
+	jq('#calendar td').on('mouseover',
 	function() {
 		jq('#calendar td').removeClass('hover');
 		jq(this).addClass('hover')
@@ -94,7 +94,7 @@ jQuery(document).ready(function() {
 	window.setInterval(scrollList, 5000);
 	jq('.live_top li').each(function(i) {
 		jq(this).hover(function() {
-			jq('.live_top li').removeClass('on').eq(i).addClass('on')
+			jq('._top li').removeClass('on').eq(i).addClass('on')
 		})
 	});
 	jq('.list_1 li').each(function(i) {
