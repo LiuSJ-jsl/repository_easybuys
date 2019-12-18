@@ -20,8 +20,19 @@ public interface ProductMapper {
      * @Param []
      * @date 2019/10/21 15:54
      */
-    @Select("select * from easybuy.easybuy_product where isDelete = 0")
+    @Select("select * from easybuy.easybuy_product where isDelete = 0 and id = 1546211")
     List<Product> getProductByIsDelete();
+
+    /**
+     * @param []
+     * @return java.util.List<com.htkj.subject.entity.Product>
+     * @MethodName: getProduct
+     * @Description: 获取1546211的id
+     * @author LiuShanJie
+     * @date 2019/12/18 15:18
+     */
+    @Select("select * from easybuy.easybuy_product where isDelete = 0 and id = 1546211")
+    Product getProduct();
 
     /**
      * @param [id]

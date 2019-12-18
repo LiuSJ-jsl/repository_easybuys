@@ -38,8 +38,11 @@ public class ProductController {
     @RequestMapping("/single")
     public String single(Model model, @Valid int id) {
         System.out.println(id);
+        Product pro = productMapper.getProduct();
         Product product = productMapper.getProductById(id);
         model.addAttribute("productById", product);
+        model.addAttribute("id", id);
+        model.addAttribute("pro", pro);
         return "product";
     }
 }

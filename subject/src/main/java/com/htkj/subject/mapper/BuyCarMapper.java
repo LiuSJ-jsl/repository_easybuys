@@ -9,4 +9,5 @@ import java.util.List;
 public interface BuyCarMapper {
     @Select("select * from easybuy.easybuy_buycar where uid = #{uid}")
     List<BuyCar> getBuyCarById(@Param("uid") int uid);
+
 }

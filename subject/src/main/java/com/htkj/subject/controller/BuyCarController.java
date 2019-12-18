@@ -27,4 +27,9 @@ public class BuyCarController {
         model.addAttribute("getBuyCar", getBuyCarById);
         return "BuyCar";
     }
+
+    @RequestMapping("/buycarthree")
+    public String buycarthree(Model model) {
+        return "BuyCar_Three";
+    }
 }
