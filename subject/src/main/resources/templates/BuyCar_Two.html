@@ -516,6 +516,7 @@
             //类型
             var genre = getUrlParam("genre");
             var title = decodeURI(genre);
+            var set = cost * n_ipt;
             jq(".car_tr").append('<td>\n' +
                 '                    <div class="c_s_img"><img src="images/c_2.jpg" width="73" height="73" /></div>\n' +
                 '                    Rio 锐澳 水蜜桃味白兰地鸡尾酒（预调酒） '+checked+'\n' +
@@ -524,7 +525,7 @@
                 '                <td align="center">'+n_ipt+'</td>\n' +
                 '                <td align="center" style="color:#ff4e00;">￥'+set+'</td>\n' +
                 '                <td align="center">26R</td>');
-            var set = cost * n_ipt;
+
             jq(".aggregate").append('   <td colspan="5" align="right" style="font-family:\'Microsoft YaHei\';">\n' +
                 '                    商品总价：￥'+set+' ； 返还积分 56R  \n' +
                 '                </td>')
