@@ -76,7 +76,7 @@
             </div>
         </div>
         <div class="top">
-            <div class="logo"><a href="Index.html"><img src="/static/images/logo.png"/></a></div>
+            <div class="logo"><a th:href="@{/product}"><img src="/static/images/logo.png"/></a></div>
             <div class="search">
                 <form>
                     <input type="text" value="" class="s_ipt"/>
@@ -446,18 +446,20 @@
                             <td class="p_td" width="160">商品名称</td>
                             <td width="395"> Rio 锐澳 水蜜桃味白兰地鸡尾酒（预调酒） 275ml</td>
                             <td class="p_td" width="160">电子邮件</td>
-                            <td width="395"><input type="text" class="ban" value="" style="border:none;height: 100%;width: 395px;"/></td>
+                            <td width="395"><input type="text" class="ban" value=""
+                                                   style="border:none;height: 100%;width: 395px;"/></td>
                         </tr>
                         <tr>
                             <td class="p_td">详细信息</td>
-                            <td><input type="text" class="ban" value="" style="border:none;height: 100%;width: 395px;"/></td>
+                            <td><input type="text" class="ban" value="" style="border:none;height: 100%;width: 395px;"/>
+                            </td>
                             <td class="p_td">电话</td>
 
-                            <td><input type="text" class="ban" value="" style="border:none;height: 100%;width: 395px;"/></td>
+                            <td><input type="text" class="ban" value="" style="border:none;height: 100%;width: 395px;"/>
+                            </td>
                         </tr>
 
                     </table>
-
 
 
                     <div class="two_t">
@@ -507,48 +509,47 @@
             function getUrlParam(name) {
                 var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
                 var r = window.location.search.substr(1).match(reg);  //匹配目标参数
-                if (r != null) return unescape(r[2]); return null; //返回参数值
+                if (r != null) return unescape(r[2]);
+                return null; //返回参数值
             }
 
             //价格
-            var n_ipt =  getUrlParam("n_ipt");
+            var n_ipt = getUrlParam("n_ipt");
             //数量
             var cost = getUrlParam("cost");
             //型号
-            var  checked = getUrlParam("checked");
+            var checked = getUrlParam("checked");
             //类型
             var genre = getUrlParam("genre");
             var title = decodeURI(genre);
             var set = cost * n_ipt;
             jq(".car_tr").append('<td>\n' +
                 '                    <div class="c_s_img"><img src="images/c_2.jpg" width="73" height="73" /></div>\n' +
-                '                    Rio 锐澳 水蜜桃味白兰地鸡尾酒（预调酒） '+checked+'\n' +
+                '                    Rio 锐澳 水蜜桃味白兰地鸡尾酒（预调酒） ' + checked + '\n' +
                 '                </td>\n' +
-                '                <td align="center">颜色：'+title+'</td>\n' +
-                '                <td align="center">'+n_ipt+'</td>\n' +
-                '                <td align="center" style="color:#ff4e00;">￥'+set+'</td>\n' +
+                '                <td align="center">颜色：' + title + '</td>\n' +
+                '                <td align="center">' + n_ipt + '</td>\n' +
+                '                <td align="center" style="color:#ff4e00;">￥' + set + '</td>\n' +
                 '                <td align="center">26R</td>');
 
             jq(".aggregate").append('   <td colspan="5" align="right" style="font-family:\'Microsoft YaHei\';">\n' +
-                '                    商品总价：￥'+set+' ； 返还积分 56R  \n' +
+                '                    商品总价：￥' + set + ' ； 返还积分 56R  \n' +
                 '                </td>')
-            jq(".pay li").click(function(){
+            jq(".pay li").click(function () {
 
                 jq(this).siblings('li').removeClass('checked');  // 删除其他兄弟元素的样式
                 jq(this).addClass('checked');                            // 添加当前元素的样式
             });
 
 
-                jq('.car_tab').find('input[type=checkbox]').bind('click', function(){
+            jq('.car_tab').find('input[type=checkbox]').bind('click', function () {
 
-                    jq('.car_tab').find('input[type=checkbox]').not(this).attr("checked", false);
+                jq('.car_tab').find('input[type=checkbox]').not(this).attr("checked", false);
 
-                });
-
+            });
 
 
         })
-
 
 
     </script>

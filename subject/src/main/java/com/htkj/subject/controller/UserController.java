@@ -19,8 +19,8 @@ public class UserController {
     UserMapper userMapper;
 
     @RequestMapping("/personage")
-    public String getUser(int id, Model model) {
-        LoginUser user = userMapper.getUser(id);
+    public String getUser(Model model) {
+        LoginUser user = userMapper.getUser(50);
         model.addAttribute("user", user);
         return "personage";
     }

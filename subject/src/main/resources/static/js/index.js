@@ -4,7 +4,7 @@ jQuery(function () {
     // alert(userName)
     if (userName == "null" || userName == "") {
         // alert(userName)
-        jQuery(".sou").prepend(' <span class="fl">你好，请<a th:href="@{/login}">登录</a>&nbsp; <a href="/registerUser" style="color:#ff4e00;">免费注册</a>&nbsp;|&nbsp;<a href="#">我的订单</a>&nbsp;|</span>');
+        jQuery(".sou").prepend(' <span class="fl">你好，请<a href="/login">登录</a>&nbsp; <a href="/registerUser" style="color:#ff4e00;">免费注册</a>&nbsp;|&nbsp;<a href="#">我的订单</a>&nbsp;|</span>');
         jQuery(".car_bg").prepend('<div class="un_login">还未登录！<a th:href="@{/login}" style="color:#ff4e00;">马上登录</a> 查看购物车！</div>\n')
     } else {
         jQuery(".car_bg").prepend(' <ul class="cars">\n' +
