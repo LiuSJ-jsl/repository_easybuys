@@ -47,8 +47,8 @@ public class DemoHbRunner extends AbsHbRunner {
             .setStoreId("store10001").setMac("0a:00:27:00:00:00").setNetworkType("LAN")
             .setProviderId("2088911212323549") // 设置系统商pid
             .setSysTradeInfoList(sysTradeInfoList) // 系统商同步trade_info信息
-            .setExceptionInfoList(exceptionInfoList) // 填写异常信息，如果有的话
-        ;
+            .setExceptionInfoList(exceptionInfoList); // 填写异常信息，如果有的话
+
         return builder;
     }
 }
