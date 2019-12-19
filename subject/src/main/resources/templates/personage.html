@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
-		<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
-    <script type="text/javascript" src="js/menu.js"></script>    
+		<script type="text/javascript" src="/static/js/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="/static/js/menu.js"></script>    
         
-	<script type="text/javascript" src="js/select.js"></script>
-	<link type="text/css" rel="stylesheet" href="css/style.css" />    
+	<script type="text/javascript" src="/static/js/select.js"></script>
+	<link type="text/css" rel="stylesheet" href="/static/css/style.css" />
     
 	</head>
 	<body>
 		<div class="soubg">
 	<div class="sou">
         <span class="fr">
-        	<span class="fl">你好，请<a href="Login.html">登录</a>&nbsp; <a href="Regist.html" style="color:#ff4e00;">免费注册</a>&nbsp;|&nbsp;<a href="#">我的订单</a>&nbsp;|</span>
+        	<span class="fl">你好，请<a href="Login.html">登录</a>&nbsp; <a th:href="@{/regist}" style="color:#ff4e00;">免费注册</a>&nbsp;|&nbsp;<a href="#">我的订单</a>&nbsp;|</span>
         	<script>
         	    var jq = jQuery.noConflict(); 
         	    jQuery(function()
@@ -63,7 +63,7 @@
             </span>
             <span class="fl">|&nbsp;关注我们：</span>
             <span class="s_sh"><a href="#" class="sh1">新浪</a><a href="#" class="sh2">微信</a></span>
-            <span class="fr">|&nbsp;<a href="#">手机版&nbsp;<img src="images/s_tel.png" align="absmiddle" /></a></span>
+            <span class="fr">|&nbsp;<a href="#">手机版&nbsp;<img src="/static/images/s_tel.png" align="absmiddle" /></a></span>
         </span>
     </div>
 </div>
@@ -71,7 +71,7 @@
 
 <div class="m_top_bg">
     <div class="top">
-        <div class="m_logo"><a href="Index.html"><img src="images/logo1.png" /></a></div>
+        <div class="m_logo"><a href="Index.html"><img src="/static/images/logo1.png" /></a></div>
         </div>
     </div>
 </div>
@@ -109,7 +109,7 @@
         	<div class="m_des">
             	<table border="0" style="width:870px; line-height:22px;" cellspacing="0" cellpadding="0">
                   <tr valign="top">
-                    <td width="115"><img src="images/user.jpg" width="90" height="90" /></td>
+                    <td width="115"><img src="/static/images/user.jpg" width="90" height="90" /></td>
                     <td>
                     	<div class="m_user">TRACY</div>
                         <p>
