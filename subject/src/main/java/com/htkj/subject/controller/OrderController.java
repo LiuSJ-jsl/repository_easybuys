@@ -6,7 +6,6 @@ import com.htkj.subject.util.GetRundom;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.validation.Valid;
@@ -41,6 +40,6 @@ public class OrderController {
     public String getOrder(Model model, @Valid Integer id) {
         Order order = orderMapper.getOrder(id);
         model.addAttribute("order", order);
-        return "order";
+        return "index";
     }
 }

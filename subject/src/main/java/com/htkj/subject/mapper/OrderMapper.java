@@ -24,4 +24,5 @@ public interface OrderMapper {
 
     @Select("select * from easybuy_order ea,(select MAX(createTime) as MaxDate from easybuy_order where userid = 50) eb where ea.createTime = eb.MaxDate")
     Order getOrder(@Param("userId") int id);
+
 }

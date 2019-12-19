@@ -17,9 +17,19 @@ public class PageController {
         return "BuyCar_Two";
     }
 
-
-    @RequestMapping("/personage")
-    public String personage(Model model) {
-        return "personage";
+    @RequestMapping("/orders")
+    public String order(Model model) {
+        return "Order";
     }
+
+    @RequestMapping("/address")
+    public String address(Model model) {
+        return "address";
+    }
+
+    @RequestMapping("/shopping_trolley")
+    public String shopping_trolley(Model model) {
+        return "shopping_trolley";
+    }
+
 }
