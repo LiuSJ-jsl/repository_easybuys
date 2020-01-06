@@ -69,4 +69,5 @@
 });
 function cls(ob){
 	ob.parentNode.parentNode.removeChild(ob.parentNode);
+
 };

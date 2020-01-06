@@ -24,7 +24,7 @@ jQuery(function () {
             '                    <div class="price_sum">共计&nbsp; <font color="#ff4e00">￥</font><span>1058</span></div>\n' +
             '                    <div class="price_a"><a href="BuyCar.html">去购物车结算</a></div>\n' +
             '                    <!--End 购物车已登录 End-->')
-        jQuery(".sou").prepend(" <span class='fl'>欢迎:<a href='/personage?id=50' >" + userName + "</span></a>&nbsp;|&nbsp;<a href='#'>我的订单</a>&nbsp;|</span>");
+        jQuery(".sou").prepend(" <span class='fl'>欢迎:<a th:href='@{/personage}' >" + userName + "</span></a>&nbsp;|&nbsp;<a href='#'>我的订单</a>&nbsp;|</span>");
 
     }
 
